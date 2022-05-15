@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+    .header{
+      min-height:2vh;
+      width: 70px;
+      background-image: url('../mywebsite/logo (2).jpg') ;
+      
+    
+  
+      background-position: center;
+      background-size: cover;
+      position: relative ;
+      
+  
+  }
+  .body{
+      background-image: "logo (2).jpg";
+      align-content: center;
+      
+  }
+  nav{
+      display: flex;
+      padding: 1% 2%;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgb(253, 237, 218);
+  
+  }
+  nav img{
+      width:80px;
+  }
+  .nav-links{
+      flex: 1;
+      text-align: right;
+  }
+  .nav-links ul li{
+      list-style: none;
+      display: inline-block;
+      padding:6px 12px;
+      position: relative;
+  }
+  .nav-links ul li a{
+      color: black;
+      text-decoration:none;
+      font-size: 20px;
+      text-align:right;
+  }
+  .nav-links ul li::after{
+      content:'';
+      width:0%;
+      height: 2px;
+      background: rgb(253, 237, 218);
+      display: block;
+      margin: auto;
+      transition: 0.5s;
+      
+  }
+  .nav-links ul li:hover::after{
+    background-color: black;
+     width: 100%;
+  
+  }
+  .text-box{
+      width:90%;
+      color:blue;
+      position: absolute;
+      top:50%;
+      left:50%;
+      transform: translate(-50%,-50%);
+      text-align: right;
+  }
+  
+  body {font-family: Arial, Helvetica, sans-serif;
+       
+       background-color: rgb(253, 237, 218);
+       background-repeat: no-repeat;
+       background-attachment: fixed;
+       background-size: 100% 100%;
+     }
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial;
+  }
+  
+  .column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+  }
+  
+  .column img {
+    opacity: 0.8; 
+    cursor: pointer; 
+  }
+  
+  .column img:hover {
+    opacity: 1;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .container {
+    position: relative;
+    display: none;
+    align-content: center;
+  }
+  
+  #imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: black;
+    font-size: 20px;
+  }
+  
+  .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: black;
+    font-size: 35px;
+    cursor: pointer;
+  }
+  </style>
+</head>
+
+<body>
+    <section clas="header">
+    <nav>
+        <a href="index.html"><img src="logo (2).jpg"></a>
+        
+        
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="products.html">PRODUCTS</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+
+            </ul>
+
+
+        </div>
+    </nav>
+  
+<div class="row">
+  
+    <div class="column">
+    <img src="image8.jpg" alt="Lipstick <br> Rs: 599/-" height="240px" width="360px" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="image4.jpg" alt="Brush <br> Rs: 799/-" height="240px" width="360px" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="image6.jpg" alt="foundation <br> Rs: 999/-" height="240px" width="360px" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="image7.jpg" alt="foundation <br> Rs: 1499/-" height="240px" width="360px" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="image11.jpg" alt="Touch-up kit <br> Rs: 999/-" height="240px" width="360px" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="image13.jpg" alt="makeup-kit <br> Rs: 699/-" height="240px" width="360px" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="image12.jpg" alt="makeup <br> Rs: 999/-" height="240px" width="360px" 
+    onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="image13.webp" alt="soft pinch liquid blush <br> Rs: 799/-" height="240px" width="360px" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="image14.jpeg" alt="hyaluronic acid <br> Rs: 999/-" height="240px" width="360px" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="image15.jpg" alt="soft pinch liquid blush <br> Rs: 899/-" height="240px" width="360px" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="image16.webp" alt="Lipstick <br> Rs: 699/-" height="240px" width="360px" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="image17.jpg" alt="Lipstick <br> Rs: 899/-" height="240px" width="360px" onclick="myFunction(this);">
+  </div>
+
+</div>
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" height="600px" width="500px">
+  <div id="imgtext"></div>
+</div>
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,346 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    min-height: 2vh;
+    width: 100px;
+   background-position: center;
+   background-size: 100% 100%;
+    position: relative;
+    
+}
+.body{
+    background-image: "logo (2).jpg";
+    align-content: center;
+}
+nav{
+    display: flex;
+    padding: 1% 2%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 100px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: right;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: black;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+
+}
+.text-box{
+    width: 90%;
+    color: rgb(4, 4, 4);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 50px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 18px;
+    color: white;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(4, 4, 4);
+    border: 1px solid white;
+    padding: 12px 34px;
+    font-size: 15px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+}
+.hero-btn:hover{
+    border: 1px solid rgb(87, 52, 26);
+    background: white;
+    transition: 1s;
+}
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    
+    
+    
+}
+.wrapper{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.text-container{
+    flex: 1;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+}
+.text-container h1{
+    font-size: 50px;
+    padding: 10px 0px;
+    align-items: center;
+}
+.text-container p{
+    font-size: 22px;
+    color: black;
+    padding: 10px 0px 10px 60px; 
+}
+.text-container a{
+    text-decoration: none;
+    padding:12px;
+    
+    margin-top: 30px;
+    background-color: black;
+    color: wheat;
+    font-size: 20px;
+    border-radius: 20px;
+
+
+}
+.text-container a:hover{
+    background-color: transparent;
+    color: brown;
+    border: 2px solid black;
+}
+@media screen and (max-width: 1600px)
+{
+    .about-container{
+        width: 90%;
+    }
+    .image-container img{
+        width:400px;
+        height: 400px;
+    }
+    .text-container h1{
+        font-size: 50px;
+    }
+}
+
+
+
+.contact .icons-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .contact .icons-container .icons {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 1rem;
+    background: rgb(253, 237, 218);
+    margin-bottom: 2rem;
+  }
+  
+  .contact .icons-container .icons i {
+    height: auto;
+    width: 6.5rem;
+    line-height: 6.5rem;
+    font-size: 2.5rem;
+    color: black;
+    background: white;
+    border-radius: 50%;
+    text-align: center;
+    margin-bottom: .5rem;
+
+  }
+  
+  .contact .icons-container .icons h3 {
+    font-size: 2rem;
+    color: black;
+    padding: .7rem 0;
+  }
+  
+  .contact .icons-container .icons p {
+    line-height: 2;
+    font-size: 1.4rem;
+    color: #666;
+  }
+  
+  .contact .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  
+  .contact .row form {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 42rem;
+            flex: 1 1 42rem;
+    border-radius: 1rem;
+    background: rgb(253, 237, 218);
+    padding: 2rem;
+  }
+  
+  .contact .row form h3 {
+    font-size: 2.5rem;
+    color: black;
+    margin-bottom: .5rem;
+  }
+  
+  .contact .row form .box, .contact .row form textarea {
+    width: 100%;
+    padding: 1rem 1.2rem;
+    font-size: 1.6rem;
+    color: #666;
+    text-transform: none;
+    margin: 1rem 0;
+    border-radius: .5rem;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .contact .row form textarea {
+    height: 15rem;
+    resize: none;
+  }
+  
+  .contact .row .map {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 42rem;
+            flex: 1 1 42rem;
+    width: 100%;
+    border-radius: 1rem;
+  }
+ 
+  .rajal1{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.background-color{
+    width:100%;
+    min-height: 100vh;
+
+    display: flex;
+}
+.bg-1{
+    flex:1;
+    background-color: rgb(253, 237, 218);
+}
+.services-container{
+    width: 85%;
+    min-height: 80vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(253, 237, 218);
+    
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow:24px 24px 30px rgb(253, 237, 218);
+
+}
+.image-container{
+    flex: 1;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.image-container img{
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 5px;
+
+
+
+}
+.tex-container{
+    flex: 1;
+    
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+
+}
+.tex-container h1{
+    font-size: 50px;
+    padding: 10px 0px;
+    align-items: center;
+}
+.tex-container p{
+    font-size: 22px;
+    padding: 10px 0px; 
+}
+.tex-container a{
+    text-decoration: none;
+    padding:12px;
+    
+    margin-top: 30px;
+    background-color: rgb(10, 10, 9);
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+
+
+}
+.tex-container a:hover{
+    background-color: rgb(253, 237, 218);
+    color: black;
+    border: 2px solid black;
+    color: rgb(253, 237, 218);
+}
+@media screen and (max-width: 1600px)
+{
+    .services-container{
+        width: 90%;
+    }
+    .image-container img{
+        width: 500px;
+        height: 500px;
+    }
+    .tex-container h1{
+        font-size: 50px;
+    }
+
+}
